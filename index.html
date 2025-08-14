@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Card Game</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    header {
+      background: #121212;
+      width: 100%;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin-left: 30px;
+      color: #ffa726;
+    }
+
+    nav {
+      margin-right: 30px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffa726;
+    }
+
+    main {
+      margin-top: 150px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .play-btn {
+      background: #ffa726;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 25px;
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .play-btn:hover {
+      background: #fb8c00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧠 Memory Card Game</h1>
+    <nav>
+      <a href="#about" onclick="toggleSection('about')">About</a>
+      <a href="#rules" onclick="toggleSection('rules')">Rules</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Test Your Memory!</h2>
+    <p>Flip the cards, match all pairs, and sharpen your memory while having fun.</p>
+    <a href="game.html"><button class="play-btn">Play Now</button></a>
+  </main>
+
+  <section id="about" style="display: none; padding: 20px; max-width: 600px; margin: 20px auto;">
+    <h2>About</h2>
+    <p>This game is built using HTML, CSS, and JavaScript. It challenges your brain to recall positions and test your concentration skills. Created as a fun project to sharpen logic and design skills.</p>
+  </section>
+
+  <section id="rules" style="display: none; padding: 20px; max-width: 600px; margin: 20px auto;">
+    <h2>Rules</h2>
+    <ul style="text-align: left;">
+      <li>Click on two cards to flip them over.</li>
+      <li>If the cards match, they stay flipped.</li>
+      <li>If not, they flip back after a short delay.</li>
+      <li>Match all pairs to win the game.</li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
